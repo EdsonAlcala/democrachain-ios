@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "democrachain", "democrachain\democrachain.csproj", "{ED3519E9-0F52-46C8-A98C-13439DF70D3A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhone = Release|iPhone
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ED3519E9-0F52-46C8-A98C-13439DF70D3A}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{ED3519E9-0F52-46C8-A98C-13439DF70D3A}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{ED3519E9-0F52-46C8-A98C-13439DF70D3A}.Release|iPhone.ActiveCfg = Release|iPhone
+		{ED3519E9-0F52-46C8-A98C-13439DF70D3A}.Release|iPhone.Build.0 = Release|iPhone
+		{ED3519E9-0F52-46C8-A98C-13439DF70D3A}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{ED3519E9-0F52-46C8-A98C-13439DF70D3A}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{ED3519E9-0F52-46C8-A98C-13439DF70D3A}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{ED3519E9-0F52-46C8-A98C-13439DF70D3A}.Debug|iPhone.Build.0 = Debug|iPhone
+	EndGlobalSection
+EndGlobal
