@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="1831">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -154,10 +154,60 @@
                         <outlet property="sinceLabel" destination="53" id="name-outlet-53"/>
                         <outlet property="divider" destination="59" id="name-outlet-59"/>
                     </connections>
+                    <navigationItem title="Title" id="1851" key="navigationItem"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="98" y="30"/>
+        </scene>
+        <scene sceneID="923">
+            <objects>
+                <viewController id="924" sceneMemberID="viewController" customClass="TestController" title="Home Page" storyboardIdentifier="TestController" useStoryboardIdentifierAsRestorationIdentifier="YES">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="921"/>
+                        <viewControllerLayoutGuide type="bottom" id="922"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="925">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="928" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="background-notification.png">
+                                <rect key="frame" x="0.0" y="24" width="320" height="544"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="1860" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="first-cube-05.png">
+                                <rect key="frame" x="100" y="145" width="120" height="120"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Democrachain" minimumFontSize="17" id="1861" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" textAlignment="center">
+                                <rect key="frame" x="73" y="281" width="174" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                            </textField>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="HomePageController" destination="925" id="name-outlet-925"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="926" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="461" y="34"/>
+        </scene>
+        <scene sceneID="1830">
+            <objects>
+                <navigationController id="1831" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1833">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue id="1852" destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1834" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-270" y="24"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -174,5 +224,8 @@
         <image name="total-carbon-icon.png" width="40" height="40"/>
         <image name="user-age-icon.png" width="40" height="40"/>
         <image name="cancel-icon.png" width="58" height="58"/>
+        <image name="blockchain-01.png" width="174" height="178"/>
+        <image name="first-cube-01.png" width="174" height="178"/>
+        <image name="first-cube-05.png" width="174" height="178"/>
     </resources>
 </document>

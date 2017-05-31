@@ -91,6 +91,7 @@
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -113,6 +114,10 @@
     </Compile>
     <Compile Include="Constants.cs" />
     <Compile Include="LoadingOverlay.cs" />
+    <Compile Include="TestController.cs" />
+    <Compile Include="TestController.designer.cs">
+      <DependentUpon>TestController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="azure-messaging">
@@ -131,6 +136,9 @@
     <BundleResource Include="Resources\total-carbon-icon.png" />
     <BundleResource Include="Resources\user-age-icon.png" />
     <BundleResource Include="Resources\cancel-icon.png" />
+    <BundleResource Include="Resources\blockchain-01.png" />
+    <BundleResource Include="Resources\first-cube-01.png" />
+    <BundleResource Include="Resources\first-cube-05.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
