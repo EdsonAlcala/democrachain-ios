@@ -158,11 +158,19 @@ namespace democrachain
 					//Manually show an alert
 					if (!string.IsNullOrEmpty(alert))
 					{
-						UINavigationController navigationController = (UINavigationController)this.Window.RootViewController;
-						ViewController Controller = navigationController.Storyboard.InstantiateViewController("ViewController") as ViewController;
-						//Controller.Region = notification.Region;
-						navigationController.PushViewController(Controller, false);
-						UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
+						try
+						{
+							UINavigationController navigationController = (UINavigationController)this.Window.RootViewController;
+							ViewController Controller = navigationController.Storyboard.InstantiateViewController("ViewController") as ViewController;
+							//Controller.Region = notification.Region;
+							navigationController.PushViewController(Controller, false);
+							UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
+						}
+						catch (Exception ex)
+						{
+							var message = ex.Message;
+						}
+
 					}
 				}
 			}
