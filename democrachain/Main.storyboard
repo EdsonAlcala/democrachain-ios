@@ -57,85 +57,46 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Joined since April 2015" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53">
-                                <rect key="frame" x="99" y="190" width="178" height="21"/>
+                                <rect key="frame" x="120" y="190" width="178" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.99607843137254903" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mexico City" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="54">
-                                <rect key="frame" x="99" y="230" width="90" height="21"/>
+                                <rect key="frame" x="120" y="230" width="90" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.99607843137254903" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="30" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="55">
-                                <rect key="frame" x="99" y="274" width="21" height="21"/>
+                                <rect key="frame" x="120" y="274" width="21" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.99607843137254903" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="30 °C" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56">
-                                <rect key="frame" x="99" y="318" width="44" height="21"/>
+                                <rect key="frame" x="120" y="316" width="44" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.99607843137254903" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <constraints>
-                                    <constraint id="2206" firstItem="56" firstAttribute="height" constant="21"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="2206"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <mask key="constraints">
-                                        <include reference="2206"/>
-                                    </mask>
-                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.6 Tones" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57">
-                                <rect key="frame" x="99" y="362" width="75" height="21"/>
+                                <rect key="frame" x="120" y="366" width="75" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.99607843137254903" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <constraints>
-                                    <constraint id="2207" firstItem="57" firstAttribute="height" constant="21"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="2207"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <mask key="constraints">
-                                        <include reference="2207"/>
-                                    </mask>
-                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total Carbon Emission " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58">
-                                <rect key="frame" x="99" y="391" width="175" height="21"/>
+                                <rect key="frame" x="120" y="390" width="175" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.99607843137254903" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <constraints>
-                                    <constraint id="2208" firstItem="58" firstAttribute="height" constant="21"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="2208"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <mask key="constraints">
-                                        <include reference="2208"/>
-                                    </mask>
-                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="59">
                                 <rect key="frame" x="3" y="179" width="320" height="1"/>
@@ -156,23 +117,22 @@
                                 </variation>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="joined-date-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="61">
-                                <rect key="frame" x="43" y="184" width="32" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="50" y="183" width="40" height="40"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="location-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="62">
-                                <rect key="frame" x="43" y="224" width="32" height="32"/>
+                                <rect key="frame" x="43" y="224" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="temperature-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="63">
-                                <rect key="frame" x="43" y="312" width="32" height="32"/>
+                                <rect key="frame" x="43" y="312" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="total-carbon-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="64">
-                                <rect key="frame" x="43" y="356" width="32" height="32"/>
+                                <rect key="frame" x="43" y="356" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="user-age-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="65">
-                                <rect key="frame" x="43" y="268" width="32" height="32"/>
+                                <rect key="frame" x="43" y="268" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="line-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="66">
@@ -230,6 +190,20 @@
                                 <exclude reference="2276"/>
                                 <exclude reference="2277"/>
                                 <exclude reference="2278"/>
+                                <exclude reference="2288"/>
+                                <exclude reference="2331"/>
+                                <exclude reference="2338"/>
+                                <exclude reference="2340"/>
+                                <exclude reference="2341"/>
+                                <exclude reference="2342"/>
+                                <exclude reference="2343"/>
+                                <exclude reference="2344"/>
+                                <exclude reference="2345"/>
+                                <exclude reference="2346"/>
+                                <exclude reference="2348"/>
+                                <exclude reference="2349"/>
+                                <exclude reference="2350"/>
+                                <exclude reference="2352"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -262,6 +236,20 @@
                                 <include reference="2276"/>
                                 <include reference="2277"/>
                                 <include reference="2278"/>
+                                <include reference="2288"/>
+                                <include reference="2331"/>
+                                <include reference="2338"/>
+                                <include reference="2340"/>
+                                <include reference="2341"/>
+                                <include reference="2342"/>
+                                <include reference="2343"/>
+                                <include reference="2344"/>
+                                <include reference="2345"/>
+                                <include reference="2346"/>
+                                <include reference="2348"/>
+                                <include reference="2349"/>
+                                <include reference="2350"/>
+                                <include reference="2352"/>
                             </mask>
                         </variation>
                         <constraints>
@@ -288,6 +276,44 @@
                             <constraint id="2276" firstItem="67" firstAttribute="top" secondItem="66" secondAttribute="centerY" constant="27"/>
                             <constraint id="2277" firstItem="6" firstAttribute="trailing" secondItem="67" secondAttribute="trailing" constant="51"/>
                             <constraint id="2278" firstItem="17" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="67"/>
+                            <constraint id="2288" firstItem="55" firstAttribute="top" secondItem="54" secondAttribute="bottom" constant="23"/>
+                            <constraint id="2331" firstItem="61" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="43">
+                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                            </constraint>
+                            <constraint id="2338" firstItem="62" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="43">
+                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                            </constraint>
+                            <constraint id="2340" firstItem="53" firstAttribute="leading" secondItem="61" secondAttribute="trailing" constant="30"/>
+                            <constraint id="2341" firstItem="54" firstAttribute="leading" secondItem="62" secondAttribute="trailing" constant="20">
+                                <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                            </constraint>
+                            <constraint id="2342" firstItem="65" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="43">
+                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                            </constraint>
+                            <constraint id="2343" firstItem="63" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="43">
+                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                            </constraint>
+                            <constraint id="2344" firstItem="64" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="43">
+                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                            </constraint>
+                            <constraint id="2345" firstItem="55" firstAttribute="leading" secondItem="65" secondAttribute="trailing" constant="20">
+                                <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                            </constraint>
+                            <constraint id="2346" firstItem="56" firstAttribute="leading" secondItem="63" secondAttribute="trailing" constant="24">
+                                <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                            </constraint>
+                            <constraint id="2348" firstItem="58" firstAttribute="leading" secondItem="64" secondAttribute="trailing" constant="9">
+                                <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                            </constraint>
+                            <constraint id="2349" firstItem="57" firstAttribute="leading" secondItem="64" secondAttribute="trailing" constant="32">
+                                <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                            </constraint>
+                            <constraint id="2350" firstItem="56" firstAttribute="top" secondItem="55" secondAttribute="bottom" constant="21">
+                                <variation key="heightClass=regular-widthClass=compact" constant="23"/>
+                            </constraint>
+                            <constraint id="2352" firstItem="57" firstAttribute="top" secondItem="56" secondAttribute="bottom" constant="29">
+                                <variation key="heightClass=regular-widthClass=compact" constant="23"/>
+                            </constraint>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="1851"/>
