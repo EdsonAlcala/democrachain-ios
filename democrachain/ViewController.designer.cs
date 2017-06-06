@@ -27,6 +27,10 @@ namespace democrachain
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton notApprovedButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel sinceLabel { get; set; }
 
         [Action ("UIButton7_TouchUpInside:")]
@@ -48,6 +52,11 @@ namespace democrachain
             if (divider != null) {
                 divider.Dispose ();
                 divider = null;
+            }
+
+            if (notApprovedButton != null) {
+                notApprovedButton.Dispose ();
+                notApprovedButton = null;
             }
 
             if (sinceLabel != null) {
