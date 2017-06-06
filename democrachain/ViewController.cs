@@ -30,21 +30,27 @@ namespace democrachain
 				ShowLoadingOverlay();
 				if (string.IsNullOrEmpty(parameters.ContractAbi))
 					parameters = await FetchContractInfoAsync();
+                try
+                {
+					var fromAddress = parameters.FromAddress;
+					Web3Geth web3 = new Web3Geth("http://23.98.223.9:8545");
 
-				var fromAddress = parameters.FromAddress;
-				Web3Geth web3 = new Web3Geth("http://23.98.223.9:8545");
+					//var contract = web3.Eth.GetContract(parameters.ContractAbi, parameters.ContractAddress);
+					//var voteForOptionFunction = contract.GetFunction("VoteForOption");
+					//var voteAddedEvent = contract.GetEvent("VoteAdded");
+					//var filterForVoteAddedEvent = await voteAddedEvent.CreateFilterAsync();
 
-				var contract = web3.Eth.GetContract(parameters.ContractAbi, parameters.ContractAddress);
-				var voteForOptionFunction = contract.GetFunction("VoteForOption");
-				var voteAddedEvent = contract.GetEvent("VoteAdded");
-				var filterForVoteAddedEvent = await voteAddedEvent.CreateFilterAsync();
+					//var transactionHash = await voteForOptionFunction.SendTransactionAsync(fromAddress, "No");
 
-                var transactionHash = await voteForOptionFunction.SendTransactionAsync(fromAddress, "No");
+					//var receipt = await MineAndGetReceiptAsync(web3, transactionHash);
 
-				var receipt = await MineAndGetReceiptAsync(web3, transactionHash);
-
-				var logForVoteAdded = await voteAddedEvent.GetFilterChanges<VoteAddedEvent>(filterForVoteAddedEvent);
-
+					//var logForVoteAdded = await voteAddedEvent.GetFilterChanges<VoteAddedEvent>(filterForVoteAddedEvent);
+				}
+                catch (Exception)
+                {
+                    ShowErrorPage();
+                    return;
+                }
 				ShowSuccessMessage(sender);
 			};
 
@@ -53,26 +59,40 @@ namespace democrachain
 				ShowLoadingOverlay();
 				if (string.IsNullOrEmpty(parameters.ContractAbi))
 					parameters = await FetchContractInfoAsync();
+                try
+                {
+                    var fromAddress = parameters.FromAddress;
+                    Web3Geth web3 = new Web3Geth("http://23.98.223.9:8545");
 
-				var fromAddress = parameters.FromAddress;
-				Web3Geth web3 = new Web3Geth("http://23.98.223.9:8545");
+                    //var contract = web3.Eth.GetContract(parameters.ContractAbi, parameters.ContractAddress);
+                    //var voteForOptionFunction = contract.GetFunction("VoteForOption");
+                    //var voteAddedEvent = contract.GetEvent("VoteAdded");
 
-				var contract = web3.Eth.GetContract(parameters.ContractAbi, parameters.ContractAddress);
-				var voteForOptionFunction = contract.GetFunction("VoteForOption");
-				var voteAddedEvent = contract.GetEvent("VoteAdded");
+                    //var filterForVoteAddedEvent = await voteAddedEvent.CreateFilterAsync();
+                    ////byte[] sendData = Encoding.ASCII.GetBytes("Yes");
+                    //var transactionHash = await voteForOptionFunction.SendTransactionAsync(fromAddress, "Yes");
 
-				var filterForVoteAddedEvent = await voteAddedEvent.CreateFilterAsync();
-                //byte[] sendData = Encoding.ASCII.GetBytes("Yes");
-                var transactionHash = await voteForOptionFunction.SendTransactionAsync(fromAddress, "Yes");
+                    //var receipt = await MineAndGetReceiptAsync(web3, transactionHash);
 
-				var receipt = await MineAndGetReceiptAsync(web3, transactionHash);
+                    //var logForVoteAdded = await voteAddedEvent.GetFilterChanges<VoteAddedEvent>(filterForVoteAddedEvent);
 
-				var logForVoteAdded = await voteAddedEvent.GetFilterChanges<VoteAddedEvent>(filterForVoteAddedEvent);
-
-			
+                }
+                catch (Exception)
+                {
+                    ShowErrorPage();
+                    return;
+                }
 				ShowSuccessMessage(sender);
 			};
 		}
+
+        private void ShowErrorPage(){
+            ErrorController errorPage = this.Storyboard.InstantiateViewController("ErrorController") as ErrorController;
+			if (errorPage != null)
+			{
+				this.NavigationController.PushViewController(errorPage, true);
+			}
+        }
 		public async Task<Nethereum.RPC.Eth.DTOs.TransactionReceipt> MineAndGetReceiptAsync(Web3Geth web3, string transactionHash)
 		{
 

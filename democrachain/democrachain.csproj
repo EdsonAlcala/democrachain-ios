@@ -191,6 +191,10 @@
     <Compile Include="TestController.designer.cs">
       <DependentUpon>TestController.cs</DependentUpon>
     </Compile>
+    <Compile Include="ErrorController.cs" />
+    <Compile Include="ErrorController.designer.cs">
+      <DependentUpon>ErrorController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="azure-messaging">
