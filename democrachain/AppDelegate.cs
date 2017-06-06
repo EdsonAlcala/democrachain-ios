@@ -91,10 +91,45 @@ namespace democrachain
 			});
 		}
 
+		//public override void ReceivedLocalNotification(UIApplication application, UILocalNotification notification)
+		//{
+		//	// show an alert
+		//	UIAlertController okayAlertController = UIAlertController.Create(notification.AlertAction, notification.AlertBody, UIAlertControllerStyle.Alert);
+		//	okayAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
+		//	viewController.PresentViewController(okayAlertController, true, null);
+
+		//	// reset our badge
+		//	UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
+		//}
+
+		//public override void ReceivedRemoteNotification(UIApplication application, NSDictionary userInfo)
+		//{
+		//	if (application.ApplicationState == UIApplicationState.Active)
+		//	{
+		//	}
+		//	else if (application.ApplicationState == UIApplicationState.Background)
+		//	{
+		//	}
+		//	else if (application.ApplicationState == UIApplicationState.Inactive)
+		//	{
+		//	}
+		//}
+
 		public override void ReceivedRemoteNotification(UIApplication application, NSDictionary userInfo)
 		{
 			ProcessNotification(userInfo, false);
 		}
+
+		//public override void ReceivedLocalNotification(UIApplication application, UILocalNotification notification)
+		//{
+
+		//	UINavigationController navigationController = (UINavigationController)this.Window.RootViewController;
+		//	ViewController Controller = navigationController.Storyboard.InstantiateViewController("ViewController") as ViewController;
+		//	//Controller.Region = notification.Region;
+		//	navigationController.PushViewController(Controller, false);
+		//	UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
+
+		//}
 
 		void ProcessNotification(NSDictionary options, bool fromFinishedLaunching)
 		{
@@ -123,12 +158,17 @@ namespace democrachain
 					//Manually show an alert
 					if (!string.IsNullOrEmpty(alert))
 					{
-						//UIAlertView avAlert = new UIAlertView("Notification", alert, null, "OK", null);
-						//avAlert.Show();
+						UINavigationController navigationController = (UINavigationController)this.Window.RootViewController;
+						ViewController Controller = navigationController.Storyboard.InstantiateViewController("ViewController") as ViewController;
+						//Controller.Region = notification.Region;
+						navigationController.PushViewController(Controller, false);
+						UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
 					}
 				}
 			}
 		}
 	}
 }
+
+
 
