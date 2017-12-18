@@ -14,7 +14,14 @@ namespace democrachain
 	public partial class ViewController : UIViewController
 	{
 		LoadingOverlay loadPop;
-		const string url = "http://democrachain-deploy.azurewebsites.net/information";
+        const string DEMOCRACHAIN_INFORMATION_URL = "http://chainnode.westeurope.cloudapp.azure.com:4000/information";
+        const string DEMOCRACHAIN_APPROVE_URL = "http://chainnode.westeurope.cloudapp.azure.com:4000/approve";
+        const string DEMOCRACHAIN_DENY_URL = "http://chainnode.westeurope.cloudapp.azure.com:4000/decline";
+        const string GET_NODE_URL = "http://52.232.4.88:8545";
+		const string VOTE_FOR_OPTION = "VoteForOption";
+		const string VOTE_ADDED = "VoteAdded";
+		const string VOTE_FOR_NO_OPTION = "No";
+
 		Parameter parameters;
 		protected ViewController(IntPtr handle) : base(handle)
 		{
@@ -28,27 +35,29 @@ namespace democrachain
 			notApprovedButton.TouchUpInside += async (sender, e) =>
 			{
 				ShowLoadingOverlay();
-				if (string.IsNullOrEmpty(parameters.ContractAbi))
-					parameters = await FetchContractInfoAsync();
+				
                 try
                 {
+                    if (string.IsNullOrEmpty(parameters.ContractAbi))
+                        parameters = await FetchContractInfoAsync();
 					var fromAddress = parameters.FromAddress;
-					Web3Geth web3 = new Web3Geth("http://23.98.223.9:8545");
+					Web3Geth web3 = new Web3Geth(GET_NODE_URL);
 
 					var contract = web3.Eth.GetContract(parameters.ContractAbi, parameters.ContractAddress);
-					var voteForOptionFunction = contract.GetFunction("VoteForOption");
-					var voteAddedEvent = contract.GetEvent("VoteAdded");
+					var voteForOptionFunction = contract.GetFunction(VOTE_FOR_OPTION);
+					var voteAddedEvent = contract.GetEvent(VOTE_ADDED);
 					var filterForVoteAddedEvent = await voteAddedEvent.CreateFilterAsync();
 
-					var transactionHash = await voteForOptionFunction.SendTransactionAsync(fromAddress, "No");
+					var transactionHash = await voteForOptionFunction.SendTransactionAsync(fromAddress, VOTE_FOR_NO_OPTION);
 
-					var receipt = await MineAndGetReceiptAsync(web3, transactionHash);
+					//var receipt = await MineAndGetReceiptAsync(web3, transactionHash);
 
 					var logForVoteAdded = await voteAddedEvent.GetFilterChanges<VoteAddedEvent>(filterForVoteAddedEvent);
 				}
-                catch (Exception)
+                catch (Exception exc)
                 {
                     ShowErrorPage();
+                    var message = exc;
                     return;
                 }
 				ShowSuccessMessage(sender);
@@ -57,12 +66,12 @@ namespace democrachain
 			approvedButton.TouchUpInside += async (sender, e) =>
 			{
 				ShowLoadingOverlay();
-				if (string.IsNullOrEmpty(parameters.ContractAbi))
-					parameters = await FetchContractInfoAsync();
                 try
                 {
+                    if (string.IsNullOrEmpty(parameters.ContractAbi))
+                        parameters = await FetchContractInfoAsync();
                     var fromAddress = parameters.FromAddress;
-                    Web3Geth web3 = new Web3Geth("http://23.98.223.9:8545");
+                    Web3Geth web3 = new Web3Geth(GET_NODE_URL);
 
                     var contract = web3.Eth.GetContract(parameters.ContractAbi, parameters.ContractAddress);
                     var voteForOptionFunction = contract.GetFunction("VoteForOption");
@@ -72,14 +81,15 @@ namespace democrachain
                     
 					var transactionHash = await voteForOptionFunction.SendTransactionAsync(fromAddress, "Yes");
 
-                    var receipt = await MineAndGetReceiptAsync(web3, transactionHash);
+                    //var receipt = await MineAndGetReceiptAsync(web3, transactionHash);
 
                     var logForVoteAdded = await voteAddedEvent.GetFilterChanges<VoteAddedEvent>(filterForVoteAddedEvent);
 
                 }
-                catch (Exception)
+                catch (Exception exc)
                 {
                     ShowErrorPage();
+                    var message = exc;
                     return;
                 }
 				ShowSuccessMessage(sender);
@@ -129,7 +139,7 @@ namespace democrachain
 		}
 		private async Task<Parameter> FetchContractInfoAsync()
 		{
-			HttpWebRequest request = (HttpWebRequest)WebRequest.Create(new Uri(url));
+			HttpWebRequest request = (HttpWebRequest)WebRequest.Create(new Uri(DEMOCRACHAIN_INFORMATION_URL));
 			request.ContentType = "application/json";
 			request.Method = "GET";
 
@@ -159,20 +169,11 @@ namespace democrachain
 			loadPop = new LoadingOverlay(bounds); // using field from step 2
 			View.Add(loadPop);
 		}
-		public async Task<bool> DownloadHomepage()
+
+		public async Task<bool> Yes()
 		{
-			var bounds = UIScreen.MainScreen.Bounds;
-
-			// show the loading overlay on the UI thread using the correct orientation sizing
-			loadPop = new LoadingOverlay(bounds); // using field from step 2
-			View.Add(loadPop);
-
-			var httpClient = new HttpClient(); // Xamarin supports HttpClient!
-											   //httpClient.DefaultRequestHeaders.Accept.Clear();
-											   //httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-
-			HttpResponseMessage response = await httpClient.GetAsync("http://democrachain-api.azurewebsites.net/vote");
-			loadPop.Hide();
+			var httpClient = new HttpClient(); 
+            HttpResponseMessage response = await httpClient.GetAsync(DEMOCRACHAIN_APPROVE_URL);
 			if (response.IsSuccessStatusCode)
 			{
 				return true;
@@ -182,6 +183,29 @@ namespace democrachain
 				return false;
 			}
 		}
+		//public async Task<bool> DownloadHomepage()
+		//{
+		//	var bounds = UIScreen.MainScreen.Bounds;
+
+		//	// show the loading overlay on the UI thread using the correct orientation sizing
+		//	loadPop = new LoadingOverlay(bounds); // using field from step 2
+		//	View.Add(loadPop);
+
+		//	var httpClient = new HttpClient(); // Xamarin supports HttpClient!
+		//									   //httpClient.DefaultRequestHeaders.Accept.Clear();
+		//									   //httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+		//	HttpResponseMessage response = await httpClient.GetAsync(DEMOCRACHAIN_VOTE_URL);
+		//	loadPop.Hide();
+		//	if (response.IsSuccessStatusCode)
+		//	{
+		//		return true;
+		//	}
+		//	else
+		//	{
+		//		return false;
+		//	}
+		//}
 
 		public override bool ShouldAutorotateToInterfaceOrientation(UIInterfaceOrientation toInterfaceOrientation)
 		{

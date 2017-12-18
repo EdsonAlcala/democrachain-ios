@@ -38,6 +38,7 @@
       "idiom": "iphone"
     },
     {
+      "filename": "120.png",
       "size": "60x60",
       "scale": "2x",
       "idiom": "iphone"
@@ -78,6 +79,7 @@
       "idiom": "ipad"
     },
     {
+      "filename": "167px167.png",
       "size": "83.5x83.5",
       "scale": "2x",
       "idiom": "ipad"
@@ -98,6 +100,7 @@
       "idiom": "ipad"
     },
     {
+      "filename": "152.png",
       "size": "76x76",
       "scale": "2x",
       "idiom": "ipad"
