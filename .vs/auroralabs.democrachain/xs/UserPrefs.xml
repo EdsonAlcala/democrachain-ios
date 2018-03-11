@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{ED3519E9-0F52-46C8-A98C-13439DF70D3A}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AppDelegate.cs">
+    <Files>
+      <File FileName="AppDelegate.cs" Line="19" Column="8" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.auroralabs.democrachain PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.a903df8549ebcd4cc77debf62e9953beacdd3722" />
+</Properties>
